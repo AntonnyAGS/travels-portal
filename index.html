@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Portal de viagens</title>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="#">
+          Portal de viagens
+        </a>
+      </h1>
+      <div class="menu">
+        <a href="#">
+          Destinos
+        </a>
+        <a href="#">
+          Valores
+        </a>
+        <a href="#contact">
+          Contato
+        </a>
+      </div>
+    </header>
+    <main>
+      <section id="home">
+        <div class="image" style="max-height: 500px;">
+          <img src="assets/logo.png" width="100%" />
+        </div>
+        <h2>
+          As melhores naves!
+        </h2>
+        <p>
+          Preços especiais para os planetas da federação galática. Visite ainda
+          planetas, universos e realidades alternativas!
+        </p>
+      </section>
+      <section id="contact">
+        <h2>Consultar valores</h2>
+        <form>
+          <input type="text" placeholder="Origem" />
+          <input type="text" placeholder="Destino" />
+          <input type="text" placeholder="Data de partida" />
+          <input type="text" placeholder="Data de volta" />
+          <button type="submit">
+            Consultar
+          </button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
+
+<style lang="css" scoped>
+  :root {
+    --padding: 16px;
+
+    --main-blue: #323d4a;
+    --main-green: #43bc9a;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-size: 14px;
+    font-family: Montserrat;
+
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+  }
+
+  h1,
+  p,
+  h2 {
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: var(--padding);
+
+    background: var(--main-blue);
+    color: white;
+    gap: var(--padding);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 10;
+  }
+
+  header > h1 {
+    font-size: 1.5rem;
+  }
+
+  header > h1 a {
+    color: white;
+    text-decoration: none;
+  }
+
+  header > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  header > div a {
+    border-bottom: 1px solid grey;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 32px;
+    color: white;
+    text-decoration: none;
+  }
+
+  main {
+    flex: 1;
+  }
+
+  main > section {
+    height: calc(100vh - 204px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    padding: var(--padding);
+  }
+
+  main > section:first-child {
+    background: var(--main-green);
+    color: white;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  main > section > h2 {
+    text-transform: uppercase;
+  }
+
+  main > section > p {
+    text-align: center;
+    padding-top: 32px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 32px;
+
+    width: 90%;
+    max-width: 500px;
+  }
+
+  input,
+  button {
+    height: 48px;
+    font-family: Montserrat;
+  }
+
+  input {
+    border: none;
+    border-bottom: 1px solid grey;
+  }
+
+  button {
+    background: var(--main-green);
+    color: white;
+    border: none;
+
+    margin-top: 16px;
+    border-radius: 5px;
+
+    cursor: pointer;
+  }
+
+  @media (min-width: 720px) {
+    html,
+    body {
+      font-size: 16px;
+    }
+
+    header {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    header > div {
+      flex-direction: row;
+      width: auto;
+      gap: var(--padding);
+    }
+
+    header > div a {
+      border: none;
+    }
+
+    main > section {
+      height: calc(100vh - 96px);
+    }
+  }
+</style>
